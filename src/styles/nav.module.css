@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 90px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #04D2FC;
+}
