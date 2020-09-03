@@ -1,0 +1,64 @@
+.studentCard {
+    max-width: 400px;
+    /*height: 220px;*/
+    padding: 18px 30px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%);
+}
+
+.studentCard__content {
+    display: flex;
+}
+
+.studentCard__img {
+    width: 120px;
+}
+
+.studentCard__img > img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.studentCard__info {
+    margin-left: 25px;
+}
+
+.studentCard__infoLine:not(:last-child) {
+    margin-bottom: 13px;
+}
+
+.studentCard__title {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 14px;
+    color: #535353;
+}
+
+.studentCard__txt {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px #10A3C9;
+}
+
+.studentCard__subLine {
+    display: flex;
+}
+
+.studentCard__subLine > div:not(:last-child) {
+    margin-right: 30px;
+}
+
+.studentCard__uni {
+    font-weight: 500;
+}
+
+.studentCard__year {
+    font-size: 14px;
+}
+
+.studentCard__generalInfo {
+    margin-bottom: 16px;
+}
