@@ -5,7 +5,7 @@ import styles from '../styles/darkMode.module.css'
 function DarkMode() {
     return(
         <div className={styles.darkModeInputWrapper}>
-            <div>Dark Mode Off</div>
+            <div className={styles.checkboxLabel}>Dark Mode Off</div>
             <DarkModeCheckbox />
         </div>
     );
