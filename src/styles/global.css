@@ -8,3 +8,27 @@ body {
     width: 100%;
     font-family: 'Segoe UI', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+main {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+main > div {
+    flex: 1 1 0px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    padding: 0 16px;
+}
+
+input[type="text"] {
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}

@@ -39,3 +39,16 @@
     left: 0;
     top: 0;
 }
+
+.darkModeInputWrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.checkboxLabel {
+    margin-right: 32px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(116, 116, 116);
+}

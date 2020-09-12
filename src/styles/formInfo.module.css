@@ -1,0 +1,20 @@
+.formWrapper {
+    padding: 22px 35px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgb(214, 214, 214);
+}
+
+.col_2 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.col_2 > :first-child {
+    padding-right: 12px;
+}
+
+.heading {
+    font-size: 26px;
+    color: #2D2D2D;
+    margin-bottom: 18px;
+}

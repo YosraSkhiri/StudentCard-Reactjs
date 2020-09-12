@@ -11,8 +11,14 @@ function App() {
     <div>
       <Nav />
       <main>
-        <StudentCard />
-        <FormInfo />
+        <div>
+          <StudentCard />
+        </div>
+        
+        <div>
+          <FormInfo />
+        </div>
+        
       </main>
       
     </div>

@@ -2,11 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 90px;
+    padding: 24px 90px;
+    width: 100%;
 }
 
 .logo {
-    font-size: 35px;
+    font-size: 28px;
     font-weight: bold;
     color: #04D2FC;
 }

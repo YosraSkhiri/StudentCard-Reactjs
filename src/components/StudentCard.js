@@ -3,11 +3,12 @@ import styles from '../styles/studentCard.module.css';
 import avatar from '../img/Avatar.jpg';
 
 function StudentDard() {
+    
     return(
         <div className={styles.studentCard}>
             <div className={styles.studentCard__generalInfo}>
                 <div className={styles.studentCard__uni}>University Name</div>
-                <div className={styles.studentCard__year}>2020 - 2021</div>
+                <div className={styles.studentCard__year}>{ new Date().getFullYear() } - { new Date().getFullYear() + 1 }</div>
             </div>
             <div className={styles.studentCard__content}>
                 <div className={styles.studentCard__img}>
@@ -15,7 +16,7 @@ function StudentDard() {
                 </div>
                 <div className={styles.studentCard__info}>
                     <div className={styles.studentCard__infoLine}>
-                        <div className={styles.studentCard__title}>FIRST NAME</div>
+                        <div className={styles.studentCard__title}>STUDENT NAME</div>
                         <div className={styles.studentCard__txt}>John Doe</div>
                     </div>
                     <div className={styles.studentCard__infoLine}>

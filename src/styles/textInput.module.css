@@ -1,0 +1,44 @@
+.input { 
+    width: 100%;
+    padding: 12px 27px;
+    border-radius: 50px;
+    border: 2px solid #BBD7DC;
+    font-size: 16px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #04D2FC;
+}
+
+.inputLabel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 27px;
+    color: #87A3A8;
+    font-size: 16px;
+    pointer-events: none;
+
+}
+
+.inputLabelOnFocus {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 0;
+    background-color: white;
+    padding: 0 6px;
+    font-size: 13px;
+    color: #04D2FC;
+    font-weight: bold;
+    margin-left: 27px;
+    transition: all .2s ease-out;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.inputWrapper:not(:last-child) {
+    margin-bottom: 30px;
+}
