@@ -4,21 +4,16 @@ import styles from '../styles/textInput.module.css';
 function TextInput (props) {
     const [isFocused, setIsFocused] = useState(false);
     const [inputValue, setInputValue] = useState('');
-    let FocusLabelClass;
     
     const handleClick = () => {
-        setIsFocused(!isFocused);
+        if(isFocused === false) {
+            setIsFocused(true);
+        } 
     };
-
-    if(isFocused) {
-        FocusLabelClass = styles.inputLabelOnFocus;
-    } else {
-        FocusLabelClass = styles.inputLabel;
-    }
 
     return(
         <div className={styles.inputWrapper}>
-            <label className={FocusLabelClass}>{props.label}</label>
+            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>{props.label}</label>
             <input 
                 type="text" 
                 className={styles.input}
