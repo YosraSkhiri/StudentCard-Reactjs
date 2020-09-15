@@ -4,7 +4,7 @@ import styles from '../styles/formInfo.module.css'
 
 function FormInfo() {
 
-    return(
+    return (
         <div className={styles.formWrapper}>
             <h1 className={styles.heading}>Student's Information</h1>
             <form>
