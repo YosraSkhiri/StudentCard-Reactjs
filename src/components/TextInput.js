@@ -1,15 +1,15 @@
 import React, {useState, useContext} from 'react';
 import styles from '../styles/textInput.module.css';
-import { UniInputContext } from '../contexts/UniInputContext';
+import { InputContext } from '../contexts/InputContext';
 
 function TextInput (props) {
     const [isFocused, setIsFocused] = useState(false);
     const [inputValue, setInputValue] = useState('');
 
-    const { addUniName } = useContext(UniInputContext);
-    const { addStudentFirstName } = useContext(UniInputContext);
-    const { addStudentLastName } = useContext(UniInputContext);
-    const { addStudentId } = useContext(UniInputContext);
+    const { addUniName } = useContext(InputContext);
+    const { addStudentFirstName } = useContext(InputContext);
+    const { addStudentLastName } = useContext(InputContext);
+    const { addStudentId } = useContext(InputContext);
     
     const handleClick = () => {
         if(isFocused === false) {

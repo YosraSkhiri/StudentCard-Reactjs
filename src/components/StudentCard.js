@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import styles from '../styles/studentCard.module.css';
 import avatar from '../img/Avatar.jpg';
-import { UniInputContext } from '../contexts/UniInputContext';
+import { InputContext } from '../contexts/InputContext';
 
 function StudentDard() {
-    const { uniName, studentFirstName, studentLastName, studentId } = useContext(UniInputContext); 
+    const { uniName, studentFirstName, studentLastName, studentId } = useContext(InputContext); 
 
     return(
         <div className={styles.studentCard}>

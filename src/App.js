@@ -3,14 +3,14 @@ import './styles/global.css';
 import Nav from './components/Nav';
 import FormInfo from './components/FormInfo';
 import StudentCard from './components/StudentCard';
-import UniInputContextProvider from './contexts/UniInputContext';
+import InputContextProvider from './contexts/InputContext';
 
 function App() {
   return (
     <div>
       <Nav />
       <main>
-        <UniInputContextProvider>
+        <InputContextProvider>
           <div>
             <StudentCard />
           </div>
@@ -18,7 +18,7 @@ function App() {
           <div>
             <FormInfo />
           </div>
-        </UniInputContextProvider>
+        </InputContextProvider>
       </main>
     </div>
   );

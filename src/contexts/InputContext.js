@@ -1,8 +1,8 @@
 import React, { createContext, useState } from 'react';
 
-export const UniInputContext = createContext();
+export const InputContext = createContext();
 
-const UniInputContextProvider = (props) => {
+const InputContextProvider = (props) => {
 
     const [uniName, setUniName] = useState('University Name');
     const [studentFirstName, setStudentFirstName] = useState('John');
@@ -26,7 +26,7 @@ const UniInputContextProvider = (props) => {
     }
 
     return (
-        <UniInputContext.Provider 
+        <InputContext.Provider 
             value={
                 {
                     uniName, addUniName,
@@ -37,8 +37,8 @@ const UniInputContextProvider = (props) => {
             }
         >
             {props.children}
-        </UniInputContext.Provider>
+        </InputContext.Provider>
     );
 }
  
-export default UniInputContextProvider;
+export default InputContextProvider;
