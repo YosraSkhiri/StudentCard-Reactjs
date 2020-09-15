@@ -1,6 +1,6 @@
 .studentCard {
     max-width: 425px;
-    /*height: 220px;*/
+    height: 230px;
     padding: 18px 30px;
     border-radius: 18px;
     background: linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%);
