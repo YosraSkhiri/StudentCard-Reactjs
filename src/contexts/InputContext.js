@@ -4,10 +4,10 @@ export const InputContext = createContext();
 
 const InputContextProvider = (props) => {
 
-    const [uniName, setUniName] = useState('University Name');
-    const [studentFirstName, setStudentFirstName] = useState('John');
-    const [studentLastName, setStudentLastName] = useState('Doe');
-    const [studentId, setStudentId] = useState('0011223344');
+    const [uniName, setUniName] = useState('');
+    const [studentFirstName, setStudentFirstName] = useState('');
+    const [studentLastName, setStudentLastName] = useState('');
+    const [studentId, setStudentId] = useState('');
 
     const addUniName = (uniName) => {
         setUniName(uniName);

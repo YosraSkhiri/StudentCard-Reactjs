@@ -4,12 +4,32 @@ import { InputContext } from '../contexts/InputContext';
 
 function TextInput (props) {
     const [isFocused, setIsFocused] = useState(false);
-    const [inputValue, setInputValue] = useState('');
+    
 
     const { addUniName } = useContext(InputContext);
     const { addStudentFirstName } = useContext(InputContext);
     const { addStudentLastName } = useContext(InputContext);
     const { addStudentId } = useContext(InputContext);
+
+    const setDefaultState = () => {
+        switch(props.label) {
+            case 'University':
+                return('University Name');
+    
+            case 'First Name':
+                return('John');
+            
+    
+            case 'Last Name':
+                return('Doe');
+            
+            default:
+                return('0011223344');
+        }
+    }
+
+    const [inputValue, setInputValue] = useState(setDefaultState());
+    
     
     const handleClick = () => {
         if(isFocused === false) {
@@ -22,7 +42,7 @@ function TextInput (props) {
     }
 
     useEffect(() => {
-        
+
         switch(props.label) {
             case 'University':
                 addUniName(inputValue);
