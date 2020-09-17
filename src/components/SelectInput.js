@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { InputContext } from '../contexts/InputContext';
 import styles from '../styles/formInput.module.css';
 
 const SelectInput = (props) => {
 
     const [isFocused, setIsFocused] = useState(false);
+    const { addStudentCycle, addStudentGrade } = useContext(InputContext);
 
     const handleClick = () => {
         if (isFocused === false) {
@@ -11,32 +13,14 @@ const SelectInput = (props) => {
         }
     };
 
-    const selectType = () => {
-        if (props.selectType === 'Cycle') {
-            return (
-                <select
-                    onClick={handleClick}
-                    className={styles.input}
-                >
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                </select>
-            );
-        } else if (props.selectType === 'Grade') {
-            return (
-                <select
-                    onClick={handleClick}
-                    className={styles.input}
-                >
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
-            );
-        }
+    const handleChange = (e) => {
+        if(props.label === 'Cycle') {
+            addStudentCycle(e.target.value);
+        } else {
+            addStudentGrade(e.target.value);
+        }  
     }
+
 
     return (
         <div className={styles.inputWrapper}>
@@ -44,11 +28,11 @@ const SelectInput = (props) => {
             <select
                 onClick={handleClick}
                 className={styles.input}
+                onChange={handleChange}
             >
-                <option disabled selected></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
             </select>
         </div>
     );

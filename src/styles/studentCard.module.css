@@ -4,6 +4,7 @@
     padding: 18px 30px;
     border-radius: 18px;
     background: linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%);
+    /*linear-gradient(90deg,#ab6bff,#9ad5f9 15%,#575df0 35%,#ab6bff 50%,#9ad5f9 65%,#575df0 85%,#ab6bff);*/
     box-shadow: 0 1px 2px rgba(1, 124, 243, 0.1), 
                 0 2px 4px rgba(1, 124, 243, 0.1), 
                 0 4px 8px rgba(1, 124, 243, 0.1), 

@@ -8,6 +8,8 @@ const InputContextProvider = (props) => {
     const [studentFirstName, setStudentFirstName] = useState('');
     const [studentLastName, setStudentLastName] = useState('');
     const [studentId, setStudentId] = useState('');
+    const [studentCycle, setStudentCycle] = useState('1');
+    const [studentGrade, setStudentGrade] = useState('1');
 
     const addUniName = (uniName) => {
         setUniName(uniName);
@@ -25,6 +27,14 @@ const InputContextProvider = (props) => {
         setStudentId(id);
     }
 
+    const addStudentCycle = (cycle) => {
+        setStudentCycle(cycle);
+    }
+
+    const addStudentGrade = (grade) => {
+        setStudentGrade(grade)
+    }
+
     return (
         <InputContext.Provider 
             value={
@@ -32,7 +42,9 @@ const InputContextProvider = (props) => {
                     uniName, addUniName,
                     studentFirstName, addStudentFirstName,
                     studentLastName, addStudentLastName,
-                    studentId, addStudentId
+                    studentId, addStudentId,
+                    studentCycle, addStudentCycle,
+                    studentGrade, addStudentGrade
                 }
             }
         >

@@ -13,7 +13,6 @@ function FormInfo() {
                 <TextInput label='First Name' />
                 <TextInput label='Last Name' />
                 <TextInput label='ID' />
-                <SelectInput label='Cycle' />
                 <div className={styles.col_2}>
                     <SelectInput label='Cycle' />
                     <SelectInput label='Grade' />

@@ -79,7 +79,7 @@ function TextInput (props) {
                 addStudentId(inputValue);
         }
 
-    }, [inputValue])
+    })
 
     return(
         <div className={styles.inputWrapper}>
