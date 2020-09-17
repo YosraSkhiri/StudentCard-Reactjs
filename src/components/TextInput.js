@@ -1,5 +1,5 @@
-import React, {useState, useContext} from 'react';
-import styles from '../styles/textInput.module.css';
+import React, {useState, useContext, useEffect} from 'react';
+import styles from '../styles/formInput.module.css';
 import { InputContext } from '../contexts/InputContext';
 
 function TextInput (props) {
@@ -19,7 +19,10 @@ function TextInput (props) {
 
     const handleChange = (e) => {
         setInputValue(e.target.value);
+    }
 
+    useEffect(() => {
+        
         switch(props.label) {
             case 'University':
                 addUniName(inputValue);
@@ -36,7 +39,8 @@ function TextInput (props) {
             default:
                 addStudentId(inputValue);
         }
-    }
+
+    }, [inputValue])
 
     return(
         <div className={styles.inputWrapper}>

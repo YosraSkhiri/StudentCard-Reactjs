@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from './TextInput';
 import styles from '../styles/formInfo.module.css'
+import SelectInput from './SelectInput';
 
 function FormInfo() {
 
@@ -12,9 +13,10 @@ function FormInfo() {
                 <TextInput label='First Name' />
                 <TextInput label='Last Name' />
                 <TextInput label='ID' />
+                <SelectInput label='Cycle' />
                 <div className={styles.col_2}>
-                    <TextInput label='Cycle' />
-                    <TextInput label='Grade' />
+                    <SelectInput label='Cycle' />
+                    <SelectInput label='Grade' />
                 </div>
             </form>
         </div>
