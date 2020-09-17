@@ -39,6 +39,25 @@ function TextInput (props) {
 
     const handleChange = (e) => {
         setInputValue(e.target.value);
+
+        if(e.target.value === '') {
+            switch(props.label) {
+                case 'University':
+                    setInputValue('University Name');
+                break;
+    
+                case 'First Name':
+                    setInputValue('John');
+                break;
+    
+                case 'Last Name':
+                    setInputValue('Doe');
+                break;
+    
+                default:
+                    setInputValue('0011223344');
+            }
+        }
     }
 
     useEffect(() => {
