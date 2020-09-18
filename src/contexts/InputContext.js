@@ -10,6 +10,9 @@ const InputContextProvider = (props) => {
     const [studentId, setStudentId] = useState('');
     const [studentCycle, setStudentCycle] = useState('1');
     const [studentGrade, setStudentGrade] = useState('1');
+    const [birthMonth, setBirthMonth] = useState('January');
+    const [birthDay, setBirthDay] = useState('11');
+    const [birthYear, setBirthYear] = useState('1997');
 
     const addUniName = (uniName) => {
         setUniName(uniName);
@@ -32,7 +35,19 @@ const InputContextProvider = (props) => {
     }
 
     const addStudentGrade = (grade) => {
-        setStudentGrade(grade)
+        setStudentGrade(grade);
+    }
+
+    const addBirthMonth = (month) => {
+        setBirthMonth(month);
+    }
+
+    const addBirthDay = (day) => {
+        setBirthDay(day);
+    }
+
+    const addBirthYear = (year) => {
+        setBirthYear(year);
     }
 
     return (
@@ -44,7 +59,10 @@ const InputContextProvider = (props) => {
                     studentLastName, addStudentLastName,
                     studentId, addStudentId,
                     studentCycle, addStudentCycle,
-                    studentGrade, addStudentGrade
+                    studentGrade, addStudentGrade,
+                    birthMonth, addBirthMonth,
+                    birthDay, addBirthDay,
+                    birthYear, addBirthYear
                 }
             }
         >

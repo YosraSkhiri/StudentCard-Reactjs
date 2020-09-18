@@ -10,7 +10,10 @@ function StudentDard() {
         studentLastName, 
         studentId, 
         studentCycle, 
-        studentGrade 
+        studentGrade,
+        birthMonth,
+        birthDay,
+        birthYear 
     } = useContext(InputContext); 
 
     return(
@@ -34,7 +37,7 @@ function StudentDard() {
                     </div>
                     <div className={styles.studentCard__infoLine}>
                         <div className={styles.studentCard__title}>DATE OF BIRTH</div>
-                        <div className={styles.studentCard__txt}>11 Jan 1997</div>
+                        <div className={styles.studentCard__txt}>{`${ birthDay } ${ birthMonth.substring(0, 3) } ${ birthYear }`}</div>
                     </div>
                     <div className={styles.studentCard__infoLine}>
                         <div className={styles.studentCard__title}>ID</div>
