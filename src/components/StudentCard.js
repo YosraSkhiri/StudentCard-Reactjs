@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from '../styles/studentCard.module.css';
 import avatar from '../img/Avatar.jpg';
 import { InputContext } from '../contexts/InputContext';
+import BgCardColor from './BgCardColor';
 
 function StudentDard() {
     const { 
@@ -16,8 +17,18 @@ function StudentDard() {
         birthYear 
     } = useContext(InputContext); 
 
+
+    const [bgColor, setBgColor] = useState({
+        backgroundImage: 'linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%)'
+    })
+
+    const changeBgCard = (NewBg) => {
+        setBgColor(NewBg);
+    }
+
     return(
-        <div className={styles.studentCard}>
+        <div>
+        <div className={styles.studentCard} style={{backgroundImage: bgColor}}>
             <div className={styles.studentCard__generalInfo}>
                 <div className={styles.studentCard__uni}>{ uniName }</div>
                 <div className={styles.studentCard__year}>
@@ -55,6 +66,8 @@ function StudentDard() {
                     </div>
                 </div>
             </div>
+        </div>
+        <BgCardColor parentCallback={changeBgCard}/>
         </div>
     );
 }

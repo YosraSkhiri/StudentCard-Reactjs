@@ -1,0 +1,33 @@
+.bgBtnsWrapper {
+    margin: 70px 0;
+}
+
+.bgBtnsLabel {
+    font-size: 14px;
+    color: #7D7D7D;
+    margin-bottom: 16px;
+}
+
+.bgBtnsFlex {
+    display: flex;
+}
+
+.bgBtnsFlex > label:not(:last-child) {
+    margin-right: 26px;
+}
+
+.bgBtn {
+    display: block;
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: thin solid #D2D2D2;
+    background-color: burlywood;
+}
+
+.bgBtn > input {
+    width: 0;
+    height: 0;
+    display: none;
+}
