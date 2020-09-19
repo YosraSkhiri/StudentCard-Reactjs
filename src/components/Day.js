@@ -12,7 +12,7 @@ const Day = () => {
             setIsFocused(true);
         }
 
-        if(isWhite) {
+        if (isWhite) {
             setIsWhite(false)
         }
 
@@ -22,8 +22,8 @@ const Day = () => {
     const nbMonthDay = () => {
         if (['January', 'March', 'May', 'July', 'August', 'October', 'December'].includes(birthMonth)) {
             return 31;
-        }else if(birthMonth === 'February' ) {
-            if(birthYear % 4 && (birthYear % 100 ===! 0 || birthYear % 400)) {
+        } else if (birthMonth === 'February') {
+            if (birthYear % 4 && (birthYear % 100 === !0 || birthYear % 400)) {
                 return 29;
             } else {
                 return 28;
@@ -36,7 +36,7 @@ const Day = () => {
     const generateSelectOptions = () => {
         let options = [];
 
-        for(let i = 1; i <= nbMonthDay(); i++) {
+        for (let i = 1; i <= nbMonthDay(); i++) {
             options.push(<option key={i} value={i}>{i}</option>)
         }
         return options;
@@ -48,13 +48,14 @@ const Day = () => {
             <select
                 onClick={handleClick}
                 className={styles.input}
-                style={isWhite? {color: 'white'}: {color: 'black'}}
+                style={isWhite ? { color: 'white' } : { color: 'black' }}
+                defaultValue={ 11 }
             >
                 {generateSelectOptions()}
-                
+
             </select>
         </div>
     );
 }
- 
+
 export default Day;

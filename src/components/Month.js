@@ -31,18 +31,14 @@ const Month = () => {
                 onClick={handleClick}
                 className={styles.input}
                 style={isWhite? {color: 'white'}: {color: 'black'}}
+                defaultValue={ 'January' }
             >
                 {
                     months.map((month, index) => (
-                        index === 0? 
                         <option 
                             key={ month } 
                             value={ month }
                             defaultValue
-                        >{ month }</option>:
-                        <option 
-                            key={ month } 
-                            value={ month }
                         >{ month }</option>
                     ))
                 }

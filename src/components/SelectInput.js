@@ -5,11 +5,16 @@ import styles from '../styles/formInput.module.css';
 const SelectInput = (props) => {
 
     const [isFocused, setIsFocused] = useState(false);
+    const [isWhite, setIsWhite] = useState(true);
     const { addStudentCycle, addStudentGrade } = useContext(InputContext);
 
     const handleClick = () => {
         if (isFocused === false) {
             setIsFocused(true);
+        }
+
+        if(isWhite) {
+            setIsWhite(false)
         }
     };
 
@@ -29,6 +34,7 @@ const SelectInput = (props) => {
                 onClick={handleClick}
                 className={styles.input}
                 onChange={handleChange}
+                style={isWhite? {color: 'white'}: {color: 'black'}}
             >
                 <option value="1">1</option>
                 <option value="2">2</option>

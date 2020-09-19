@@ -5,11 +5,12 @@ import { InputContext } from '../contexts/InputContext';
 function TextInput (props) {
     const [isFocused, setIsFocused] = useState(false);
     
-
-    const { addUniName } = useContext(InputContext);
-    const { addStudentFirstName } = useContext(InputContext);
-    const { addStudentLastName } = useContext(InputContext);
-    const { addStudentId } = useContext(InputContext);
+    const { 
+        addUniName, 
+        addStudentFirstName, 
+        addStudentLastName, 
+        addStudentId 
+    } = useContext(InputContext);
 
     const setDefaultState = () => {
         switch(props.label) {
@@ -29,7 +30,6 @@ function TextInput (props) {
     }
 
     const [inputValue, setInputValue] = useState(setDefaultState());
-    
     
     const handleClick = () => {
         if(isFocused === false) {

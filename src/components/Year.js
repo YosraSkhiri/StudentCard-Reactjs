@@ -4,7 +4,7 @@ import styles from '../styles/formInput.module.css';
 
 const Year = () => {
     const [isFocused, setIsFocused] = useState(false);
-    const { addBirthYear } = useContext(InputContext);
+    const { addBirthYear, birthMonth, birthDay } = useContext(InputContext);
     const [isWhite, setIsWhite] = useState(true);
 
     const handleClick = (e) => {
@@ -15,15 +15,23 @@ const Year = () => {
         if(isWhite) {
             setIsWhite(false)
         }
-        //test the year if it's feb
+        
         addBirthYear(e.target.value);
     };
 
     const generateSelectOptions = () => {
         let options = [];
-
-        for(let i = 1905; i <= new Date().getFullYear(); i++) {
-            options.push(<option key={i} value={i}>{i}</option>)
+        if(birthMonth === 'February' && birthDay === '29') {
+            
+            for(let i = 1905; i <= new Date().getFullYear(); i++) {
+                if(i % 4 && (i % 100 !== 0 || i % 400)) {
+                    options.push(<option key={i} value={i}>{i}</option>)
+                }
+            }
+        } else {
+            for(let i = 1905; i <= new Date().getFullYear(); i++) {
+                options.push(<option key={i} value={i}>{i}</option>)
+            }
         }
 
         return options;
@@ -36,6 +44,7 @@ const Year = () => {
                 onClick={handleClick}
                 className={styles.input}
                 style={isWhite? {color: 'white'}: {color: 'black'}}
+                defaultValue={ '1997' }
             >
                 {generateSelectOptions()}
             </select>
