@@ -42,3 +42,9 @@
 .inputWrapper:not(:last-child) {
     margin-bottom: 30px;
 }
+
+.inputError {
+    font-size: 12px;
+    margin: 5px 0;
+    color: rgb(248, 50, 50);
+}

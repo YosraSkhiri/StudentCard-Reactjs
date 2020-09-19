@@ -4,6 +4,10 @@ import { InputContext } from '../contexts/InputContext';
 
 function TextInput (props) {
     const [isFocused, setIsFocused] = useState(false);
+    const [error, setError] = useState({
+        errorType: '',
+        errorMsg: ''
+    });
     
     const { 
         addUniName, 
@@ -38,7 +42,42 @@ function TextInput (props) {
     };
 
     const handleChange = (e) => {
-        setInputValue(e.target.value);
+        let letters = /^[A-Za-z]+$/;
+
+        if(props.label === 'University' || props.label === 'First Name' || props.label === 'Last Name') {
+            if(e.target.value.match(letters)) {
+                setInputValue(e.target.value);
+                setError({
+                    errorType: props.label,
+                    errorMsg: ''
+                });
+                
+            } else {
+                setError({
+                    errorType: props.label,
+                    errorMsg: `${props.label} input field can only contain characters`
+                });
+            }
+        } else {
+            if(e.target.value.match(letters)) {
+                setError({
+                    errorType: props.label,
+                    errorMsg: `${props.label} input field can only contain numbers`
+                });
+            } else if(e.target.value.length > 10) {
+                setError({
+                    errorType: props.label,
+                    errorMsg: `${props.label} input field should not exceed 10 numbers`
+                });
+            } else {
+                setInputValue(e.target.value);
+                setError({
+                    errorType: props.label,
+                    errorMsg: ''
+                });
+            }
+        } 
+        
 
         if(e.target.value === '') {
             switch(props.label) {
@@ -56,7 +95,12 @@ function TextInput (props) {
     
                 default:
                     setInputValue('0011223344');
+                    
             }
+            setError({
+                errorType: props.label,
+                errorMsg: ''
+            });
         }
     }
 
@@ -92,6 +136,7 @@ function TextInput (props) {
                     handleChange(e)
                 }}
             />
+            <div className={styles.inputError}>{error.errorMsg}</div>
         </div>
     );
 }
