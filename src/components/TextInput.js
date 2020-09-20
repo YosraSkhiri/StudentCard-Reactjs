@@ -42,7 +42,7 @@ function TextInput (props) {
     };
 
     const handleChange = (e) => {
-        let letters = /^[A-Za-z]+$/;
+        let letters = /^[A-Za-z ]+$/;
 
         if(props.label === 'University' || props.label === 'First Name' || props.label === 'Last Name') {
             if(e.target.value.match(letters)) {
