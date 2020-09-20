@@ -3,12 +3,6 @@
     height: 230px;
     padding: 18px 30px;
     border-radius: 18px;
-    background: linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%);
-    box-shadow: 0 1px 2px rgba(1, 124, 243, 0.1), 
-                0 2px 4px rgba(1, 124, 243, 0.1), 
-                0 4px 8px rgba(1, 124, 243, 0.1), 
-                0 8px 16px rgba(1, 124, 243, 0.1),
-                0 16px 32px rgba(1, 124, 243, 0.1);
 }
 
 .studentCard__content {
