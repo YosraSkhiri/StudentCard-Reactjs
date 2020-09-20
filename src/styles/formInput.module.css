@@ -48,3 +48,38 @@
     margin: 5px 0;
     color: rgb(248, 50, 50);
 }
+
+.tooltip {
+    width: fit-content;
+    position: absolute;
+    z-index: 1;
+    margin-top: 8px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 3px 6px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip.show {
+    display: block;
+    animation: fade 1.2s 1.5s ease-out forwards;
+}
+
+.tooltip.hide {
+    display: none;
+}
+
+@keyframes fade{
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+        display: none;
+    }
+}

@@ -48,6 +48,13 @@ const Year = () => {
             >
                 {generateSelectOptions()}
             </select>
+
+            <div 
+                className={
+                    (birthMonth === 'February' && birthDay === '29')? 
+                    styles.tooltip+' '+styles.show: 
+                    styles.tooltip+' '+styles.hide
+                }>Only leap years will be shown</div>
         </div>
     );
 }
