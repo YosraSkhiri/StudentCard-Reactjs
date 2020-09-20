@@ -13,6 +13,7 @@ const InputContextProvider = (props) => {
     const [birthMonth, setBirthMonth] = useState('January');
     const [birthDay, setBirthDay] = useState('11');
     const [birthYear, setBirthYear] = useState('1997');
+    const [studentImg, setStudentImg] = useState('../img/Avatar.jpg');
 
     const addUniName = (uniName) => {
         setUniName(uniName);
@@ -50,6 +51,10 @@ const InputContextProvider = (props) => {
         setBirthYear(year);
     }
 
+    const addStudentImg = (img) => {
+        setStudentImg(img)
+    }
+
     return (
         <InputContext.Provider 
             value={
@@ -62,7 +67,8 @@ const InputContextProvider = (props) => {
                     studentGrade, addStudentGrade,
                     birthMonth, addBirthMonth,
                     birthDay, addBirthDay,
-                    birthYear, addBirthYear
+                    birthYear, addBirthYear,
+                    studentImg, addStudentImg
                 }
             }
         >

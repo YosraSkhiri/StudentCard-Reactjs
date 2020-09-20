@@ -14,7 +14,9 @@ function StudentDard() {
         studentGrade,
         birthMonth,
         birthDay,
-        birthYear 
+        birthYear,
+        addStudentImg,
+        studentImg
     } = useContext(InputContext); 
 
 
@@ -24,6 +26,11 @@ function StudentDard() {
 
     const changeBgCard = (NewBg) => {
         setBgColor(NewBg);
+    }
+
+    const handleChange = (e) => {
+        console.log(e.target.value);
+        addStudentImg(e.target.value);
     }
 
     return(
@@ -38,6 +45,9 @@ function StudentDard() {
             <div className={styles.studentCard__content}>
                 <div className={styles.studentCard__img}>
                     <img src={avatar} alt="avatar"/>
+                    <label className={styles.addImg}>
+                        <input type='file' accept="image/*" onChange={handleChange}/>
+                    </label>   
                 </div>
                 <div className={styles.studentCard__info}>
                     <div className={styles.studentCard__infoLine}>
