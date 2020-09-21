@@ -29,7 +29,6 @@ const SelectInput = (props) => {
 
     return (
         <div className={styles.inputWrapper}>
-            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>{props.label}</label>
             <select
                 onClick={handleClick}
                 className={styles.input}
@@ -40,6 +39,7 @@ const SelectInput = (props) => {
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select>
+            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>{props.label}</label>
         </div>
     );
 }

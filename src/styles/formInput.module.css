@@ -19,18 +19,21 @@
     color: #87A3A8;
     font-size: 16px;
     pointer-events: none;
+}
 
+.input:focus ~ .inputLabelOnFocus {
+    color: #04D2FC;
 }
 
 .inputLabelOnFocus {
     position: absolute;
     transform: translateY(-50%);
     top: 0;
+    color: #87A3A8;
     background-color: white;
     padding: 0 6px;
     font-size: 13px;
-    color: #04D2FC;
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 27px;
     transition: all .2s ease-out;
 }

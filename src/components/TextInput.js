@@ -126,8 +126,7 @@ function TextInput (props) {
     })
 
     return(
-        <div className={styles.inputWrapper}>
-            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>{props.label}</label>
+        <div className={styles.inputWrapper}>   
             <input 
                 type="text" 
                 className={styles.input}
@@ -136,6 +135,7 @@ function TextInput (props) {
                     handleChange(e)
                 }}
             />
+            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>{props.label}</label>
             <div className={styles.inputError}>{error.errorMsg}</div>
         </div>
     );

@@ -26,7 +26,6 @@ const Month = () => {
 
     return (
         <div className={styles.inputWrapper}>
-            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>Month</label>
             <select
                 onClick={handleClick}
                 className={styles.input}
@@ -43,6 +42,7 @@ const Month = () => {
                     ))
                 }
             </select>
+            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>Month</label>
         </div>
     );
 }

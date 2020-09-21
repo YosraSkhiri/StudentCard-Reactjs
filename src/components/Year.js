@@ -39,7 +39,6 @@ const Year = () => {
 
     return (
         <div className={styles.inputWrapper}>
-            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>Year</label>
             <select
                 onClick={handleClick}
                 className={styles.input}
@@ -48,6 +47,7 @@ const Year = () => {
             >
                 {generateSelectOptions()}
             </select>
+            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>Year</label>
 
             <div 
                 className={

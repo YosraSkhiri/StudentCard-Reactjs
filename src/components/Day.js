@@ -44,7 +44,6 @@ const Day = () => {
 
     return (
         <div className={styles.inputWrapper}>
-            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>Day</label>
             <select
                 onClick={handleClick}
                 className={styles.input}
@@ -52,8 +51,8 @@ const Day = () => {
                 defaultValue={ 11 }
             >
                 {generateSelectOptions()}
-
             </select>
+            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>Day</label>
         </div>
     );
 }
