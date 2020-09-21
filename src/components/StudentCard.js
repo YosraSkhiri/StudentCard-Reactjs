@@ -53,8 +53,7 @@ function StudentDard() {
     }
 
     const handleChange = (e) => {
-        console.log(e.target.value);
-        addStudentImg(e.target.value);
+        addStudentImg(URL.createObjectURL(e.target.files[0]));
     }
 
     return(
@@ -68,7 +67,7 @@ function StudentDard() {
             </div>
             <div className={styles.studentCard__content}>
                 <div className={styles.studentCard__img}>
-                    <img src={avatar} alt="avatar"/>
+                    <img src={studentImg ? studentImg : avatar} alt="avatar"/>
                     <label className={styles.addImg}>
                         <input type='file' accept="image/*" onChange={handleChange}/>
                     </label>   

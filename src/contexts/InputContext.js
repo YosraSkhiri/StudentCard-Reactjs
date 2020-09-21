@@ -13,7 +13,7 @@ const InputContextProvider = (props) => {
     const [birthMonth, setBirthMonth] = useState('January');
     const [birthDay, setBirthDay] = useState('11');
     const [birthYear, setBirthYear] = useState('1997');
-    const [studentImg, setStudentImg] = useState('../img/Avatar.jpg');
+    const [studentImg, setStudentImg] = useState('');
 
     const addUniName = (uniName) => {
         setUniName(uniName);
