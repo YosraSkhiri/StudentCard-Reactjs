@@ -1,8 +1,9 @@
 .studentCard {
-    max-width: 425px;
+    width: 425px;
     height: 230px;
     padding: 18px 30px;
     border-radius: 18px;
+    overflow: hidden;
 }
 
 .studentCard__content {
@@ -33,7 +34,8 @@
     font-size: 12px;
     text-transform: uppercase;
     margin-right: 14px;
-    color: #535353;
+    color: #3d3d3d;
+    text-shadow: .04em .04em 0px rgb(221, 221, 221);
 }
 
 .studentCard__txt {
@@ -41,7 +43,8 @@
     color: white;
     font-weight: bold;
     font-size: 16px;
-    text-shadow: 0px 1px #10A3C9;
+    text-shadow: 0px 1px #636363;
+    letter-spacing: 1px;
 }
 
 .studentCard__subLine {
@@ -62,6 +65,7 @@
 
 .studentCard__generalInfo {
     margin-bottom: 16px;
+    color: rgb(63, 63, 63);
 }
 
 .addImg {
