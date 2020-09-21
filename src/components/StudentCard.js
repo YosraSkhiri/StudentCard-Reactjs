@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from '../styles/studentCard.module.css';
 import avatar from '../img/Avatar.jpg';
 import { InputContext } from '../contexts/InputContext';
@@ -27,7 +27,7 @@ function StudentDard() {
                     0 4px 8px rgba(1, 124, 243, 0.2), 
                     0 8px 16px rgba(1, 124, 243, 0.2),
                     0 16px 32px rgba(1, 124, 243, 0.2)`
-    })
+    });
 
     const hexToRGBa_CardShadow = (hex) => {
         let r = parseInt(hex.slice(1, 3), 16),
@@ -53,7 +53,9 @@ function StudentDard() {
     }
 
     const handleChange = (e) => {
-        addStudentImg(URL.createObjectURL(e.target.files[0]));
+        if(e.target.files[0]) {
+            addStudentImg(URL.createObjectURL(e.target.files[0])); 
+        }
     }
 
     return(
