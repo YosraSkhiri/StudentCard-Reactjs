@@ -2,8 +2,8 @@
     position: relative;
     width: 40px;
     height: 14px;
-    background-color: #D2D2D2;
     border-radius: 50px;
+    background-color: #D2D2D2;
 }
 
 .switch {
@@ -16,15 +16,15 @@
     height: 25px;
     border-radius: 50px;
     background-color: white;
-    cursor: pointer;
     box-shadow: 1px 1px 3px rgb(180, 180, 180);
+    cursor: pointer;
     transition: left .3s ease-in;
 }
 
 .on {
     left: 100%;
-    background-color: #04D2FC;
     box-shadow: 1px 1px 3px #9dc6ce;
+    background-color: #04D2FC;
 }
 
 .trackon {
@@ -33,11 +33,11 @@
 
 .checkboxInputDef {
     position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
     left: 0;
     top: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;    
 }
 
 .darkModeInputWrapper {

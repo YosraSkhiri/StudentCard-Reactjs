@@ -10,19 +10,19 @@ body {
 }
 
 main {
-    max-width: 80%;
-    margin: auto;
-    margin-bottom: 5em;
-    display: flex;
+    display: flex;    
     justify-content: space-between;
     align-content: center;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 5em;   
 }
 
 main > div {
     flex: 1 1 0px;
-    width: 100%;
     align-self: center;
     justify-self: center;
+    width: 100%;
     padding: 0 16px;
 }
 

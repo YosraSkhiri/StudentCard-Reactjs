@@ -8,6 +8,7 @@
 
 .studentCard__content {
     display: flex;
+    overflow: hidden;
 }
 
 .studentCard__img {
@@ -31,18 +32,18 @@
 
 .studentCard__title {
     display: inline-block;
-    font-size: 12px;
-    text-transform: uppercase;
     margin-right: 14px;
+    font-size: 12px;
     color: #3d3d3d;
+    text-transform: uppercase;
     text-shadow: .04em .04em 0px rgb(221, 221, 221);
 }
 
 .studentCard__txt {
     display: inline-block;
-    color: white;
-    font-weight: bold;
     font-size: 16px;
+    font-weight: bold;
+    color: white;
     text-shadow: 0px 1px #636363;
     letter-spacing: 1px;
 }
@@ -66,6 +67,7 @@
 .studentCard__generalInfo {
     margin-bottom: 16px;
     color: rgb(63, 63, 63);
+    overflow: hidden;
 }
 
 .addImg {

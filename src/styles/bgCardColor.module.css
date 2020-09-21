@@ -3,9 +3,9 @@
 }
 
 .bgBtnsLabel {
+    margin-bottom: 16px;
     font-size: 14px;
     color: #7D7D7D;
-    margin-bottom: 16px;
 }
 
 .bgBtnsFlex {
@@ -20,14 +20,19 @@
     display: block;
     width: 65px;
     height: 65px;
+    border: thin solid #D2D2D2;
     border-radius: 10px;
     cursor: pointer;
-    border: thin solid #D2D2D2;
-    background-color: burlywood;
+    transition: all .25s ease-in-out;
 }
 
 .bgBtn > input {
+    display: none;
     width: 0;
     height: 0;
-    display: none;
+    opacity: 0;
+}
+
+.bgBtn:hover {
+    transform: scale(1.15);
 }

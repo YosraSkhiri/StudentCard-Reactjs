@@ -11,12 +11,16 @@
     border-color: #04D2FC;
 }
 
-.inputLabel {
+.inputLabel-g {
     position: absolute;
-    top: 50%;
     transform: translateY(-50%);
     margin-left: 27px;
     color: #87A3A8;
+}
+
+.inputLabel {
+    composes: inputLabel-g;
+    top: 50%;
     font-size: 16px;
     pointer-events: none;
 }
@@ -26,15 +30,12 @@
 }
 
 .inputLabelOnFocus {
-    position: absolute;
-    transform: translateY(-50%);
+    composes: inputLabel-g;
     top: 0;
-    color: #87A3A8;
-    background-color: white;
     padding: 0 6px;
     font-size: 13px;
     font-weight: 600;
-    margin-left: 27px;
+    background-color: white;
     transition: all .2s ease-out;
 }
 
@@ -47,24 +48,24 @@
 }
 
 .inputError {
-    font-size: 12px;
     margin: 5px 0;
+    font-size: 12px;
     color: rgb(248, 50, 50);
 }
 
 .tooltip {
-    width: fit-content;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
+    width: fit-content;
+    padding: 3px 6px; 
     margin-top: 8px;
     background-color: black;
     border-radius: 10px;
-    padding: 3px 6px;
+    font-size: 12px;
     color: white;
     text-align: center;
-    font-size: 12px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .tooltip.show {
