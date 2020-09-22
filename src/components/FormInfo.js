@@ -6,7 +6,7 @@ import Day from './Day';
 import Month from './Month';
 import Year from './Year';
 import { DarkModeContext } from '../contexts/DarkModeContext';
-
+import SubmitBtn from './SubmitBtn';
 
 function FormInfo() {
     const { isDarkMode } = useContext(DarkModeContext);
@@ -24,10 +24,14 @@ function FormInfo() {
         color: '#f1f1f1'
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <div className={styles.formWrapper} style={ isDarkMode? formWrapperDarkModeStyles : {}}>
             <h1 className={styles.heading} style={isDarkMode? headingDarkModeStyles: {}}>Student's Information</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <TextInput label='University' />
                 <TextInput label='First Name' />
                 <TextInput label='Last Name' />
@@ -41,6 +45,7 @@ function FormInfo() {
                     <SelectInput label='Cycle' />
                     <SelectInput label='Grade' />
                 </div>
+                <SubmitBtn />
             </form>
         </div>
     );

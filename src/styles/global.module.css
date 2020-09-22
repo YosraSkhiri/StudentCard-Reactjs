@@ -35,3 +35,11 @@ input[type="text"], select {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
+button {
+    display: block;
+    background-image: none;
+    background-color: none;
+    border: none;
+    border-radius: none;
+}
