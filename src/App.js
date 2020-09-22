@@ -4,23 +4,26 @@ import Nav from './components/Nav';
 import FormInfo from './components/FormInfo';
 import StudentCard from './components/StudentCard';
 import InputContextProvider from './contexts/InputContext';
+import DarkModeProvider from './contexts/DarkModeContext';
 
 function App() {
   return (
-    <div>
-      <Nav />
-      <main>
-        <InputContextProvider>
-          <div>
-            <StudentCard />
-          </div>
+    <DarkModeProvider>
+      <div>
+        <Nav />
+        <main>
+          <InputContextProvider>
+            <div>
+              <StudentCard />
+            </div>
 
-          <div>
-            <FormInfo />
-          </div>
-        </InputContextProvider>
-      </main>
-    </div>
+            <div>
+              <FormInfo />
+            </div>
+          </InputContextProvider>
+        </main>
+      </div>
+    </DarkModeProvider>
   );
 }
 

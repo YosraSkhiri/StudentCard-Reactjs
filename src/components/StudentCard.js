@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from '../styles/studentCard.module.css';
 import avatar from '../img/Avatar.jpg';
 import { InputContext } from '../contexts/InputContext';
@@ -72,7 +72,7 @@ function StudentDard() {
                     <img src={studentImg ? studentImg : avatar} alt="avatar"/>
                     <label className={styles.addImg}>
                         <input type='file' accept="image/*" onChange={handleChange}/>
-                    </label>   
+                    </label>  
                 </div>
                 <div className={styles.studentCard__info}>
                     <div className={styles.studentCard__infoLine}>

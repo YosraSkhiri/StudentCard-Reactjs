@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect} from 'react';
 import styles from '../styles/formInput.module.css';
 import { InputContext } from '../contexts/InputContext';
+import { DarkModeContext } from '../contexts/DarkModeContext';
 
 function TextInput (props) {
     const [isFocused, setIsFocused] = useState(false);
@@ -15,6 +16,9 @@ function TextInput (props) {
         addStudentLastName, 
         addStudentId 
     } = useContext(InputContext);
+
+    const { isDarkMode } = useContext(DarkModeContext);
+
 
     const setDefaultState = () => {
         switch(props.label) {
@@ -134,8 +138,19 @@ function TextInput (props) {
                 onChange={ (e) => {
                     handleChange(e)
                 }}
+
+                style={ isDarkMode ? {
+                    color: '#FFFFFF'
+                } : {}}
             />
-            <label className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}>{props.label}</label>
+            <label 
+                className={isFocused ? styles.inputLabelOnFocus : styles.inputLabel}
+
+                style={ (isFocused && isDarkMode) ? {
+                    backgroundColor: '#424242'
+                } : {}}
+            >{props.label}</label>
+
             <div className={styles.inputError}>{error.errorMsg}</div>
         </div>
     );

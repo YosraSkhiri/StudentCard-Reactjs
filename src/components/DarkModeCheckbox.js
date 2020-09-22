@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import styles from '../styles/darkModeCheckbox.module.css'
+import React, { useContext } from 'react';
+import styles from '../styles/darkModeCheckbox.module.css';
+import { DarkModeContext } from '../contexts/DarkModeContext';
+
 
 function DarkModeCheckbox() {
+    const { toggleDarkMode, isDarkMode } = useContext(DarkModeContext);
 
-    const [isDarkModeOn, setIsDarkModeOn] = useState(false)
-    const handleClick = () => setIsDarkModeOn(!isDarkModeOn)
     let trackClass = styles.track
     let switchClass = styles.switch
     let isOn = false;
 
-    if(isDarkModeOn) {
+    if(isDarkMode) {
         trackClass +=  ' ' + styles.trackon
         switchClass += ' ' + styles.on
         isOn = true;
@@ -19,6 +20,10 @@ function DarkModeCheckbox() {
         isOn = false;
     }
 
+    const handleClick = () => {
+        toggleDarkMode(!isDarkMode);
+    }
+
     return(
         <div className={styles.darkModeInputWrapper}>
             <label className={styles.checkboxLabel}>Dark Mode { isOn? 'On': 'Off' }</label>
@@ -26,7 +31,7 @@ function DarkModeCheckbox() {
                 type="checkbox" 
                 id="theme" 
                 name="isDarkModeOn" 
-                checked={isDarkModeOn}
+                checked={isDarkMode}
                 onChange={e => {}}
                 className= {styles.checkboxInputDef}
             />
