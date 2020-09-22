@@ -1,27 +1,24 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './styles/global.module.css';
 import Nav from './components/Nav';
-import FormInfo from './components/FormInfo';
-import StudentCard from './components/StudentCard';
-import InputContextProvider from './contexts/InputContext';
 import DarkModeProvider from './contexts/DarkModeContext';
+import StudentCardForm from './components/StudentCardForm';
+import StudentCardDone from './components/StudentCardDone';
 
 function App() {
   return (
     <DarkModeProvider>
       <div>
         <Nav />
-        <main>
-          <InputContextProvider>
-            <div>
-              <StudentCard />
-            </div>
-
-            <div>
-              <FormInfo />
-            </div>
-          </InputContextProvider>
-        </main>
+        <Switch>
+          <Route exact path='/'>
+            <StudentCardForm />
+          </Route>
+          <Route exact path='/your-student-card'>
+            <StudentCardDone />
+          </Route>
+        </Switch>
       </div>
     </DarkModeProvider>
   );
