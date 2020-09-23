@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d4f46b419f34face74eef445128d194",
+    "revision": "f7cd5246dcd1e218a0eedf52cc563f13",
     "url": "/StudentCard-Reactjs/index.html"
   },
   {
-    "revision": "9950e1b8c7a387594e93",
+    "revision": "8d59c92274946c301d34",
     "url": "/StudentCard-Reactjs/static/css/main.2da5c506.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/StudentCard-Reactjs/static/js/2.36e6fefe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9950e1b8c7a387594e93",
-    "url": "/StudentCard-Reactjs/static/js/main.564a5407.chunk.js"
+    "revision": "8d59c92274946c301d34",
+    "url": "/StudentCard-Reactjs/static/js/main.2ed03263.chunk.js"
   },
   {
     "revision": "7f3821e08a65fac133ca",
