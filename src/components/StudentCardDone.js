@@ -15,7 +15,7 @@ function StudentCardDone() {
     return (
         <div className={styles.center}>
             <h1 style={isDarkMode? headingDarkModeStyles: {}}>Your Student Card is done { studentFirstName }</h1>
-            <StudentCard showColorOption={ false }/>   
+            <StudentCard showColorOption=''/>   
         </div>
     );
 }

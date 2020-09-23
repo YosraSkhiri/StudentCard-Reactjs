@@ -47,7 +47,7 @@ function FormInfo() {
                     <SelectInput label='Grade' />
                 </div>
                 <Link
-                    to='/your-student-card'
+                    to={process.env.PUBLIC_URL +'/your-student-card'}
                     className={styles.btnPrimary}>
                     Done!</Link>
             </form>

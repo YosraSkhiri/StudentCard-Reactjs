@@ -10,24 +10,24 @@ import InputContextProvider from './contexts/InputContext';
 function App() {
   return (
     <InputContextProvider>
-    <DarkModeProvider>
-    { (window.innerWidth >= 1057) ?
-      <div>
-        <Nav />
-        <Switch>
-          <Route path='/'>
-            <StudentCardForm />
-          </Route>
-          <Route exact path='/your-student-card' >
-            <StudentCardDone />
-          </Route>
-        </Switch>
-      </div> :
-      <p className={styles.alert}>For a better experience, please use your laptop</p>
-      }
-    </DarkModeProvider>
-    </InputContextProvider> 
-     
+      <DarkModeProvider>
+        {(window.innerWidth >= 1057) ?
+          <div>
+            <Nav />
+            <Switch>
+              <Route exact path={process.env.PUBLIC_URL +'/'}>
+                <StudentCardForm />
+              </Route>
+              <Route exact path={process.env.PUBLIC_URL +'/your-student-card'} >
+                <StudentCardDone />
+              </Route>
+            </Switch>
+          </div> :
+          <p className={styles.alert}>For a better experience, please use your laptop</p>
+        }
+      </DarkModeProvider>
+    </InputContextProvider>
+
   );
 }
 
