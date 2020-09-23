@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/student-card-app/static/css/main.c5409e96.chunk.css",
-    "main.js": "/student-card-app/static/js/main.b03c260e.chunk.js",
-    "main.js.map": "/student-card-app/static/js/main.b03c260e.chunk.js.map",
-    "runtime-main.js": "/student-card-app/static/js/runtime-main.44f56e16.js",
-    "runtime-main.js.map": "/student-card-app/static/js/runtime-main.44f56e16.js.map",
-    "static/js/2.36e6fefe.chunk.js": "/student-card-app/static/js/2.36e6fefe.chunk.js",
-    "static/js/2.36e6fefe.chunk.js.map": "/student-card-app/static/js/2.36e6fefe.chunk.js.map",
-    "index.html": "/student-card-app/index.html",
-    "precache-manifest.ab1506542097dc395f0d66417e63e000.js": "/student-card-app/precache-manifest.ab1506542097dc395f0d66417e63e000.js",
-    "service-worker.js": "/student-card-app/service-worker.js",
-    "static/css/main.c5409e96.chunk.css.map": "/student-card-app/static/css/main.c5409e96.chunk.css.map",
-    "static/js/2.36e6fefe.chunk.js.LICENSE.txt": "/student-card-app/static/js/2.36e6fefe.chunk.js.LICENSE.txt",
-    "static/media/studentCard.module.css": "/student-card-app/static/media/upload_icon.2a0e46d0.svg"
+    "main.css": "/StudentCard-Reactjs/static/css/main.2da5c506.chunk.css",
+    "main.js": "/StudentCard-Reactjs/static/js/main.b03c260e.chunk.js",
+    "main.js.map": "/StudentCard-Reactjs/static/js/main.b03c260e.chunk.js.map",
+    "runtime-main.js": "/StudentCard-Reactjs/static/js/runtime-main.e93319bc.js",
+    "runtime-main.js.map": "/StudentCard-Reactjs/static/js/runtime-main.e93319bc.js.map",
+    "static/js/2.36e6fefe.chunk.js": "/StudentCard-Reactjs/static/js/2.36e6fefe.chunk.js",
+    "static/js/2.36e6fefe.chunk.js.map": "/StudentCard-Reactjs/static/js/2.36e6fefe.chunk.js.map",
+    "index.html": "/StudentCard-Reactjs/index.html",
+    "precache-manifest.d56e8e8120684dde4c02408138ec423b.js": "/StudentCard-Reactjs/precache-manifest.d56e8e8120684dde4c02408138ec423b.js",
+    "service-worker.js": "/StudentCard-Reactjs/service-worker.js",
+    "static/css/main.2da5c506.chunk.css.map": "/StudentCard-Reactjs/static/css/main.2da5c506.chunk.css.map",
+    "static/js/2.36e6fefe.chunk.js.LICENSE.txt": "/StudentCard-Reactjs/static/js/2.36e6fefe.chunk.js.LICENSE.txt",
+    "static/media/studentCard.module.css": "/StudentCard-Reactjs/static/media/upload_icon.2a0e46d0.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.44f56e16.js",
+    "static/js/runtime-main.e93319bc.js",
     "static/js/2.36e6fefe.chunk.js",
-    "static/css/main.c5409e96.chunk.css",
+    "static/css/main.2da5c506.chunk.css",
     "static/js/main.b03c260e.chunk.js"
   ]
 }
