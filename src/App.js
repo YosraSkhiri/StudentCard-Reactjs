@@ -15,7 +15,7 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path='/'>
+          <Route path='/'>
             <StudentCardForm />
           </Route>
           <Route exact path='/your-student-card' >
