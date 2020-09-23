@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/StudentCard-Reactjs/static/css/main.2da5c506.chunk.css",
-    "main.js": "/StudentCard-Reactjs/static/js/main.b03c260e.chunk.js",
-    "main.js.map": "/StudentCard-Reactjs/static/js/main.b03c260e.chunk.js.map",
+    "main.js": "/StudentCard-Reactjs/static/js/main.a66de1ac.chunk.js",
+    "main.js.map": "/StudentCard-Reactjs/static/js/main.a66de1ac.chunk.js.map",
     "runtime-main.js": "/StudentCard-Reactjs/static/js/runtime-main.e93319bc.js",
     "runtime-main.js.map": "/StudentCard-Reactjs/static/js/runtime-main.e93319bc.js.map",
     "static/js/2.36e6fefe.chunk.js": "/StudentCard-Reactjs/static/js/2.36e6fefe.chunk.js",
     "static/js/2.36e6fefe.chunk.js.map": "/StudentCard-Reactjs/static/js/2.36e6fefe.chunk.js.map",
     "index.html": "/StudentCard-Reactjs/index.html",
-    "precache-manifest.d56e8e8120684dde4c02408138ec423b.js": "/StudentCard-Reactjs/precache-manifest.d56e8e8120684dde4c02408138ec423b.js",
+    "precache-manifest.b803707c3006ed4a217d373ce0c30ee1.js": "/StudentCard-Reactjs/precache-manifest.b803707c3006ed4a217d373ce0c30ee1.js",
     "service-worker.js": "/StudentCard-Reactjs/service-worker.js",
     "static/css/main.2da5c506.chunk.css.map": "/StudentCard-Reactjs/static/css/main.2da5c506.chunk.css.map",
     "static/js/2.36e6fefe.chunk.js.LICENSE.txt": "/StudentCard-Reactjs/static/js/2.36e6fefe.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e93319bc.js",
     "static/js/2.36e6fefe.chunk.js",
     "static/css/main.2da5c506.chunk.css",
-    "static/js/main.b03c260e.chunk.js"
+    "static/js/main.a66de1ac.chunk.js"
   ]
 }
