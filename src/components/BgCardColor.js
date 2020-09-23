@@ -1,7 +1,10 @@
-import React from 'react';
-import styles from '../styles/bgCardColor.module.css'
+import React, { useContext } from 'react';
+import styles from '../styles/bgCardColor.module.css';
+import { InputContext } from '../contexts/InputContext'
 
-const BgCardColor = ({ parentCallback }) => {
+const BgCardColor = () => {
+
+    const { addStudentCardBg } = useContext(InputContext);
 
     const bg_1 = {
         backgroundImage: 'linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%)'
@@ -20,7 +23,7 @@ const BgCardColor = ({ parentCallback }) => {
     }
 
     const handleChange = (e) => {
-        parentCallback(e.target.value)
+        addStudentCardBg(e.target.value);
     }
 
     return (

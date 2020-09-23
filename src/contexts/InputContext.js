@@ -14,6 +14,7 @@ const InputContextProvider = (props) => {
     const [birthDay, setBirthDay] = useState('11');
     const [birthYear, setBirthYear] = useState('1997');
     const [studentImg, setStudentImg] = useState('');
+    const [studentCardBg, setStudentCardBg] = useState('linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%)');
 
     const addUniName = (uniName) => {
         setUniName(uniName);
@@ -55,6 +56,10 @@ const InputContextProvider = (props) => {
         setStudentImg(img)
     }
 
+    const addStudentCardBg = (bgColor) => {
+        setStudentCardBg(bgColor);
+    }
+
     return (
         <InputContext.Provider 
             value={
@@ -68,7 +73,8 @@ const InputContextProvider = (props) => {
                     birthMonth, addBirthMonth,
                     birthDay, addBirthDay,
                     birthYear, addBirthYear,
-                    studentImg, addStudentImg
+                    studentImg, addStudentImg,
+                    studentCardBg, addStudentCardBg
                 }
             }
         >

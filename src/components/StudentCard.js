@@ -16,18 +16,10 @@ function StudentDard({ showColorOption }) {
         birthDay,
         birthYear,
         addStudentImg,
-        studentImg
+        studentImg,
+        studentCardBg
     } = useContext(InputContext); 
 
-
-    const [cardStyle, setCardStyle] = useState({
-        backgroundImage: 'linear-gradient(45deg, #00CEEF 0%, #1EF0FF 50%, #017CF3 100%)',
-        boxShadow: `0 1px 2px rgba(1, 124, 243, 0.2),
-                    0 2px 4px rgba(1, 124, 243, 0.2),
-                    0 4px 8px rgba(1, 124, 243, 0.2), 
-                    0 8px 16px rgba(1, 124, 243, 0.2),
-                    0 16px 32px rgba(1, 124, 243, 0.2)`
-    });
 
     const hexToRGBa_CardShadow = (hex) => {
         let r = parseInt(hex.slice(1, 3), 16),
@@ -43,15 +35,6 @@ function StudentDard({ showColorOption }) {
         return cardShadow;
     }
 
-    const changeBgCard = (NewBg) => {
-        let hexColor = NewBg.substr(-13, 7);
-        let cardShadow = hexToRGBa_CardShadow(hexColor);
-        setCardStyle({
-            backgroundImage: NewBg,
-            boxShadow: cardShadow
-        });
-    }
-
     const handleChange = (e) => {
         if(e.target.files[0]) {
             addStudentImg(URL.createObjectURL(e.target.files[0])); 
@@ -60,7 +43,7 @@ function StudentDard({ showColorOption }) {
 
     return(
         <div>
-        <div className={styles.studentCard} style={cardStyle}>
+        <div className={styles.studentCard} style={ {backgroundImage: studentCardBg} }>
             <div className={styles.studentCard__generalInfo}>
                 <div className={styles.studentCard__uni}>{ uniName }</div>
                 <div className={styles.studentCard__year}>
@@ -103,7 +86,7 @@ function StudentDard({ showColorOption }) {
                 </div>
             </div>
         </div>
-        { showColorOption ? <BgCardColor parentCallback={changeBgCard}/> : null}
+        { showColorOption ? <BgCardColor /> : null}
         </div>
     );
 }
