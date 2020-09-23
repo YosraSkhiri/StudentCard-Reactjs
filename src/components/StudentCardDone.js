@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import StudentCard from './StudentCard';
-import InputContextProvider from '../contexts/InputContext';
+import styles from '../styles/global.module.css'
+import { DarkModeContext } from '../contexts/DarkModeContext';
+import { InputContext } from '../contexts/InputContext';
 
 function StudentCardDone() {
+    const { isDarkMode } = useContext(DarkModeContext);
+    const { studentFirstName } = useContext(InputContext);
+
+    const headingDarkModeStyles = {
+        color: '#f1f1f1'
+    }
+
     return (
-        <InputContextProvider>
-            <h1>Your Student Card is done</h1>
-            <div>
-                <StudentCard />
-            </div>
-        </InputContextProvider>
+        <div className={styles.center}>
+            <h1 style={isDarkMode? headingDarkModeStyles: {}}>Your Student Card is done { studentFirstName }</h1>
+            <StudentCard showColorOption={ false }/>   
+        </div>
     );
 }
 

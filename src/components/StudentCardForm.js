@@ -1,20 +1,17 @@
 import React from 'react';
 import FormInfo from './FormInfo';
 import StudentCard from './StudentCard';
-import InputContextProvider from '../contexts/InputContext';
 
 function StudentCardForm() {
     return (
         <main>
-            <InputContextProvider>
-                <div>
-                    <StudentCard />
-                </div>
+            <div>
+                <StudentCard showColorOption='true'/>
+            </div>
 
-                <div>
-                    <FormInfo />
-                </div>
-            </InputContextProvider>
+            <div>
+                <FormInfo />
+            </div>  
         </main>
     );
 }

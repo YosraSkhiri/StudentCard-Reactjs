@@ -43,3 +43,21 @@ button {
     border: none;
     border-radius: none;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 18px;
+    font-size: 26px;
+    color: #2D2D2D;
+}
+
+.center {
+    width: fit-content;
+    padding: 0 16px;
+    padding-top: 30px;
+    margin: auto;
+}

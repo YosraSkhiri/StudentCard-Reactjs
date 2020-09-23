@@ -27,8 +27,20 @@
     padding-right: 12px;
 }
 
-.heading {
-    margin-bottom: 18px;
-    font-size: 26px;
-    color: #2D2D2D;
+.btnPrimary {
+    display: block;
+    width: 100%;
+    padding: 12px 27px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: thin solid #D2D2D2;
+    border-radius: 50px;
+    background-color: #04D2FC;
+    cursor: pointer;
+}
+
+.btnPrimary:hover {
+    background-color:  #02c5ec;
 }

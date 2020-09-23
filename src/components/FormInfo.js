@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import TextInput from './TextInput';
 import styles from '../styles/formInfo.module.css'
 import SelectInput from './SelectInput';
@@ -6,7 +7,6 @@ import Day from './Day';
 import Month from './Month';
 import Year from './Year';
 import { DarkModeContext } from '../contexts/DarkModeContext';
-import SubmitBtn from './SubmitBtn';
 
 function FormInfo() {
     const { isDarkMode } = useContext(DarkModeContext);
@@ -26,11 +26,12 @@ function FormInfo() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
     }
 
     return (
         <div className={styles.formWrapper} style={ isDarkMode? formWrapperDarkModeStyles : {}}>
-            <h1 className={styles.heading} style={isDarkMode? headingDarkModeStyles: {}}>Student's Information</h1>
+            <h1 style={isDarkMode? headingDarkModeStyles: {}}>Student's Information</h1>
             <form onSubmit={handleSubmit}>
                 <TextInput label='University' />
                 <TextInput label='First Name' />
@@ -45,7 +46,10 @@ function FormInfo() {
                     <SelectInput label='Cycle' />
                     <SelectInput label='Grade' />
                 </div>
-                <SubmitBtn />
+                <Link
+                    to='/your-student-card'
+                    className={styles.btnPrimary}>
+                    Done!</Link>
             </form>
         </div>
     );

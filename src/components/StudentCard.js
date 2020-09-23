@@ -4,7 +4,7 @@ import avatar from '../img/Avatar.jpg';
 import { InputContext } from '../contexts/InputContext';
 import BgCardColor from './BgCardColor';
 
-function StudentDard() {
+function StudentDard({ showColorOption }) {
     const { 
         uniName, 
         studentFirstName, 
@@ -70,9 +70,10 @@ function StudentDard() {
             <div className={styles.studentCard__content}>
                 <div className={styles.studentCard__img}>
                     <img src={studentImg ? studentImg : avatar} alt="avatar"/>
-                    <label className={styles.addImg}>
-                        <input type='file' accept="image/*" onChange={handleChange}/>
-                    </label>  
+                    { showColorOption ? 
+                        <label className={styles.addImg}>
+                            <input type='file' accept="image/*" onChange={handleChange}/>
+                        </label> : null}   
                 </div>
                 <div className={styles.studentCard__info}>
                     <div className={styles.studentCard__infoLine}>
@@ -102,7 +103,7 @@ function StudentDard() {
                 </div>
             </div>
         </div>
-        <BgCardColor parentCallback={changeBgCard}/>
+        { showColorOption ? <BgCardColor parentCallback={changeBgCard}/> : null}
         </div>
     );
 }
