@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './styles/global.module.css';
+import styles from './styles/global.module.css';
 import Nav from './components/Nav';
 import DarkModeProvider from './contexts/DarkModeContext';
 import StudentCardForm from './components/StudentCardForm';
@@ -11,6 +11,7 @@ function App() {
   return (
     <InputContextProvider>
     <DarkModeProvider>
+    { (window.innerWidth >= 1057) ?
       <div>
         <Nav />
         <Switch>
@@ -21,9 +22,12 @@ function App() {
             <StudentCardDone />
           </Route>
         </Switch>
-      </div>
+      </div> :
+      <p className={styles.alert}>For a better experience, please use your laptop</p>
+      }
     </DarkModeProvider>
-    </InputContextProvider>
+    </InputContextProvider> 
+     
   );
 }
 
