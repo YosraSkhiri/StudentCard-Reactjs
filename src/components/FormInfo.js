@@ -26,7 +26,6 @@ function FormInfo() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
     }
 
     return (
